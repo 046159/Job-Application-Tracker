@@ -1,3 +1,13 @@
 body {
     background-color: rgb(229, 248, 218);
 }
+
+svg {
+  margin-left: 10px; 
+  margin-right: 10px; 
+}
+
+.btn-primary {
+  background-color: black !important;
+  border-color: black !important;
+}

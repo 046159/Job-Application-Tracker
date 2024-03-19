@@ -11,10 +11,10 @@ const ContactUsForm = () => {
 
     return (
         <Formik
-            initialValues={{ date: '', company: '' }}
+            initialValues={{ date: '', company: '', outcome: '' }}
             onSubmit={(values, { setSubmitting }) => {
                 setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
+                    alert("Information has been saved.");
                     setSubmitting(false);
                     applicationsArray.push(values);
                     console.log(applicationsArray);
@@ -51,9 +51,10 @@ const ContactUsForm = () => {
                     <div className="form-group">
                         <label htmlFor="outcome">Outcome</label>
                         <Field name="outcome" as="select" className={(formik.touched.outcome && formik.errors.outcome) ? 'form-control is-invalid' : 'form-control'} type="text">
-                            <option value="interviewed-unsuccessful">Interviewed - Unsuccessful</option>
-                            <option value="noresponse">No Response</option>
-                            <option value="rejected">Rejected</option>
+                            <option value="No Response">No Response</option>
+                            <option value="Interviewed - Unsuccessful">Interviewed - Unsuccessful</option>
+                            <option value="Rejected">Rejected</option>
+                            <option value="Interviewed - Hired!">Interviewed - Hired</option>
                         </Field>
                         {formik.touched.outcome && formik.errors.outcome ? (
                             <div className="invalid-feedback">{formik.errors.outcome}</div>
@@ -61,7 +62,7 @@ const ContactUsForm = () => {
                     </div>
 
                     <div className="form-group">
-                        <button type="submit" className="btn btn-primary" disabled={isSubmitting}>{isSubmitting ? "Please wait..." : "Submit"}</button>
+                        <button type="submit" className="btn btn-primary mt-3" disabled={isSubmitting}>{isSubmitting ? "Please wait..." : "Submit"}</button>
                     </div>
 
                 </Form>
