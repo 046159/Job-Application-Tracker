@@ -3,9 +3,9 @@ import { Formik, Field, Form } from 'formik';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as Yup from 'yup';
 
-// const jsonData = localStorage.getItem("applicationsData");
-// let applicationsArray = JSON.parse(jsonData)
-let applicationsArray = []
+const jsonData = localStorage.getItem("applicationsData");
+let applicationsArray = JSON.parse(jsonData)
+// let applicationsArray = []
 
 const ContactUsForm = () => {
 
