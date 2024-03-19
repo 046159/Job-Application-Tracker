@@ -6,7 +6,12 @@ import * as bootstrap from 'bootstrap';
 function Navbar() {
     return (
         <div>
-            <p>This is the footer...</p>
+            <footer className="bootstrap-classes">
+                <div className="container">
+                    <hr></hr>
+                    <span>Created by Sardar Jafari (c) 2024</span>
+                </div>
+            </footer>
         </div>
     )
 }
