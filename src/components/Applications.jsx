@@ -7,6 +7,15 @@ function RenderingArrayOfObjects() {
     const jsonData = localStorage.getItem("applicationsData");
     let data = JSON.parse(jsonData);
 
+    if (!data) {
+        return (
+            <div className="container">
+                <p></p>
+                <p className="lead">No applications to show. Click on <strong>Add Application</strong> to add an application to the tracker.</p>
+            </div>
+        );
+    }
+
     const tableRows = data.map((element) => {
         return (
             <tr className="items" key={element.company}>
