@@ -9,7 +9,7 @@ function Navbar() {
             <footer className="bootstrap-classes">
                 <div className="container">
                     <hr></hr>
-                    <span>Created by Sardar Jafari (c) 2024</span>
+                    <span>Created by Sardar Jafari (2024)</span>
                 </div>
             </footer>
         </div>

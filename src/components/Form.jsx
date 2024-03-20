@@ -4,8 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import * as Yup from 'yup';
 
 const jsonData = localStorage.getItem("applicationsData");
-let applicationsArray = JSON.parse(jsonData)
-// let applicationsArray = []
+var applicationsArray = JSON.parse(jsonData)
+
+
+if (applicationsArray === null) {
+    console.log(applicationsArray);
+    applicationsArray = [];
+}
+
 
 const ContactUsForm = () => {
 
