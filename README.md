@@ -65,6 +65,7 @@ This application is covered under the following license: **MIT**.
 
 - https://formik.org/
 - https://www.npmjs.com/package/yup
+- https://stackoverflow.com/questions/72985281/yup-how-to-change-error-message-text-date
 
 ## Future Work
 
@@ -72,6 +73,9 @@ This application is covered under the following license: **MIT**.
 - Store data in JSON format in a file on the operating system, rather than browser's local storage.
 - Include a page for logging common interview questions and responses.
 - Perhaps on the home page present motivational quotes so it doesn't looks more interesting.
+- Add edit and delete buttons to each application row.
+- Add search functionality.
+- Show statistics.
 
 ## Questions
 
