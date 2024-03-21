@@ -5,7 +5,7 @@ import * as bootstrap from 'bootstrap';
 function Home() {
 
     const backgroundStyle = {
-        backgroundImage: `url('public/job-search.jpg')`,
+        backgroundImage: `url('job-search.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center top',
         backgroundRepeat: 'no-repeat',
