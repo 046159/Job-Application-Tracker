@@ -23,12 +23,13 @@ const ContactUsForm = () => {
                     alert("Information has been saved.");
                     setSubmitting(false);
                     applicationsArray.push(values);
-                    console.log(applicationsArray);
+                    // console.log(applicationsArray);
                     localStorage.setItem("applicationsData", JSON.stringify(applicationsArray));
                 }, 1000);
             }}
             validationSchema={Yup.object({
-                date: Yup.string()
+                date: Yup.date()
+                    .typeError('Date must be in format MM/DD/YYYY')
                     .required('Date is required'),
                 company: Yup.string()
                     .required('Company is required'),
@@ -57,10 +58,11 @@ const ContactUsForm = () => {
                     <div className="form-group">
                         <label htmlFor="outcome">Outcome</label>
                         <Field name="outcome" as="select" className={(formik.touched.outcome && formik.errors.outcome) ? 'form-control is-invalid' : 'form-control'} type="text">
-                            <option value="No Response">No Response</option>
+                            <option value="Select an option">Select an option</option>
+                            <option value="Application Rejected">Application Rejected</option>
                             <option value="Interviewed - Unsuccessful">Interviewed - Unsuccessful</option>
-                            <option value="Rejected">Rejected</option>
                             <option value="Interviewed - Hired!">Interviewed - Hired</option>
+                            <option value="No Response">No Response</option>
                         </Field>
                         {formik.touched.outcome && formik.errors.outcome ? (
                             <div className="invalid-feedback">{formik.errors.outcome}</div>
